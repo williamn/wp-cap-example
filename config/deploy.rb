@@ -1,15 +1,13 @@
 set :application, "wp-cap-example"
-set :domain, "192.168.56.102"
-set :git_domain, "github.com"
+set :domain, "example.com"
 set :user, "deploy"
+set :git_domain, "github.com"
 set :git_user, "williamn"
-set :port, "22"
 set :use_sudo, false
 set :scm, :git
 set :deploy_via, :remote_cache
 
-set :repository,  "ssh://git@#{git_domain}:#{port}/#{git_user}/#{application}.git"
-
+set :repository,  "ssh://git@#{git_domain}/#{git_user}/#{application}.git"
 set :deploy_to, "/opt/#{application}"
 
 role :app, domain
@@ -28,9 +26,9 @@ namespace :deploy do
   end
 end
 
-
 require 'erb' 
 require 'open-uri'
+
 before "deploy:setup", :db 
 after "deploy:update_code", "db:symlink" 
 
