@@ -30,12 +30,10 @@ Here is the steps:
 5. Now make sure your WordPress installation is good to go
 6. Push your changes in my-wordpress to your own Git repository
 7. Edit my-wordpress/config/deploy.rb to conform your production environment. You will need to set:
-
-application: this is the name of your application and the folder it will reside in on your server
-domain: this is the domain of your app
-user: this is the user that will be used to SSH and copying your files to your server
-git_domain and git_user should be self explanatory
-db_name, db_user, db_pass, db_host and db_prfx are all pretty self explanatory too if you have ever read through wp-config-sample.php.  If you haven't, go do that right now.
-
+`application`: this is the name of your application and the folder it will reside in on your server.
+`domain`: this is the domain of your app.
+`user`: this is the user that will be used to SSH and copying your files to your server.
+`git_domain` and `git_user` should be self explanatory.
+`db_name`, `db_user`, `db_pass`, `db_host` and `db_prfx` are all pretty self explanatory too if you have ever read through wp-config-sample.php.  If you haven't, go do that right now.
 8. Run `cap deploy:setup`
 9. If everything is good, run `cap deploy`
