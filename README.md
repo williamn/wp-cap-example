@@ -1,4 +1,4 @@
-**Deploying WordPress with Capistrano using wp-cap**
+**Deploying WordPress with [Capistrano](https://github.com/capistrano/capistrano) using wp-cap**
 
 Here is the steps:
 
